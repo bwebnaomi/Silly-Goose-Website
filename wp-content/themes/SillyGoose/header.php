@@ -7,7 +7,7 @@
     
     <?php wp_head(); ?>
 
-    <!-- Naomi Testing Visual Studio -->
+    <!-- Naomi Testing Visual Studio 2 -->
 </head>
 
 <body <?php body_class(); ?>>
