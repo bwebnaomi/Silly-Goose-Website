@@ -6,8 +6,6 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     
     <?php wp_head(); ?>
-
-    <!-- Naomi Testing Visual Studio 2 -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -57,35 +55,10 @@
                 </button>
 
                 <?php
-                wp_nav_menu([
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'primary-menu',
-                    'menu_class'     => 'nav-menu',
-                    'container'      => false,
-                    'fallback_cb'    => 'sillygoose_fallback_menu',
-                    'depth'          => 2,
-                    // Remove the walker - this was causing the error
-                ]);
+                wp_nav_menu(['theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', 'container' => false, 'fallback_cb' => 'sillygoose_fallback_menu', 'depth' => 2]);
                 ?>
-            </nav><!-- #site-navigation -->
-        </div><!-- .header-content -->
-    </header><!-- #masthead -->
+            </nav>
+        </div>
+    </header>
 
     <main id="main" class="site-main">
-
-<?php
-/**
- * Fallback menu function
- */
-function sillygoose_fallback_menu() {
-    ?>
-    <ul id="primary-menu" class="nav-menu">
-        <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Home', 'sillygoose'); ?></a></li>
-        <li><a href="<?php echo esc_url(home_url('/#about')); ?>"><?php esc_html_e('About', 'sillygoose'); ?></a></li>
-        <li><a href="<?php echo esc_url(home_url('/#services')); ?>"><?php esc_html_e('Services', 'sillygoose'); ?></a></li>
-        <li><a href="<?php echo esc_url(home_url('/#work')); ?>"><?php esc_html_e('Work', 'sillygoose'); ?></a></li>
-        <li><a href="<?php echo esc_url(home_url('/#contact')); ?>"><?php esc_html_e('Contact', 'sillygoose'); ?></a></li>
-    </ul>
-    <?php
-}
-?>
