@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:powderblue-crab-538553.hostingersite.com)",
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(awk:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

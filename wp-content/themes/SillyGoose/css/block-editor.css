@@ -1,0 +1,529 @@
+/**
+ * Block Editor Styles - Optimized Version
+ * Styles for the WordPress block editor to match frontend appearance
+ */
+
+/* ===================================
+   EDITOR VARIABLES
+   =================================== */
+.editor-styles-wrapper {
+    --primary: #ff6b35;
+    --secondary: #4ecdc4;
+    --accent: #ffd23f;
+    --muted: #f8f9fa;
+    --muted-foreground: #6c757d;
+    --foreground: #212529;
+    --background: #ffffff;
+    --card: #ffffff;
+    --border: #dee2e6;
+    --radius: 0.5rem;
+    --max-width: 1200px;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    
+    /* Typography */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+}
+
+/* ===================================
+   BASE EDITOR STYLES
+   =================================== */
+.editor-styles-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+/* ===================================
+   TYPOGRAPHY IN EDITOR
+   =================================== */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--foreground);
+}
+
+.editor-styles-wrapper h1 {
+    font-size: clamp(1.75rem, 2rem + 2vw, 3.5rem);
+    font-weight: 900;
+}
+
+.editor-styles-wrapper h2 {
+    font-size: clamp(1.5rem, 1.75rem + 1.5vw, 2.5rem);
+    font-weight: 800;
+}
+
+.editor-styles-wrapper h3 {
+    font-size: clamp(1.25rem, 1.5rem + 1vw, 2rem);
+    font-weight: 700;
+}
+
+.editor-styles-wrapper h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.editor-styles-wrapper h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.editor-styles-wrapper h6 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+}
+
+.editor-styles-wrapper p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+    color: var(--foreground);
+}
+
+/* ===================================
+   CUSTOM COLOR CLASSES
+   =================================== */
+.editor-styles-wrapper .has-primary-color { color: var(--primary) !important; }
+.editor-styles-wrapper .has-primary-background-color { background-color: var(--primary) !important; }
+.editor-styles-wrapper .has-secondary-color { color: var(--secondary) !important; }
+.editor-styles-wrapper .has-secondary-background-color { background-color: var(--secondary) !important; }
+.editor-styles-wrapper .has-accent-color { color: var(--accent) !important; }
+.editor-styles-wrapper .has-accent-background-color { background-color: var(--accent) !important; }
+.editor-styles-wrapper .has-muted-color { color: var(--muted-foreground) !important; }
+.editor-styles-wrapper .has-muted-background-color { background-color: var(--muted) !important; }
+.editor-styles-wrapper .has-foreground-color { color: var(--foreground) !important; }
+.editor-styles-wrapper .has-foreground-background-color { background-color: var(--foreground) !important; }
+.editor-styles-wrapper .has-white-color { color: #ffffff !important; }
+.editor-styles-wrapper .has-white-background-color { background-color: #ffffff !important; }
+
+/* ===================================
+   CUSTOM FONT SIZES
+   =================================== */
+.editor-styles-wrapper .has-small-font-size { font-size: var(--font-size-sm) !important; }
+.editor-styles-wrapper .has-normal-font-size { font-size: var(--font-size-base) !important; }
+.editor-styles-wrapper .has-large-font-size { font-size: var(--font-size-xl) !important; }
+.editor-styles-wrapper .has-extra-large-font-size { font-size: var(--font-size-2xl) !important; }
+.editor-styles-wrapper .has-huge-font-size { font-size: var(--font-size-4xl) !important; }
+
+/* ===================================
+   BUTTON STYLES IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-button .wp-block-button__link {
+    border-radius: var(--radius) !important;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    border: 2px solid transparent;
+}
+
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+    border: 2px solid;
+    background: transparent !important;
+}
+
+.editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   GROUP AND COLUMNS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-group {
+    margin-bottom: var(--space-lg);
+}
+
+.editor-styles-wrapper .wp-block-columns {
+    gap: var(--space-lg);
+}
+
+.editor-styles-wrapper .wp-block-column {
+    min-height: unset;
+}
+
+/* ===================================
+   IMAGE BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-image {
+    margin-bottom: var(--space-lg);
+}
+
+.editor-styles-wrapper .wp-block-image img {
+    border-radius: var(--radius);
+    max-width: 100%;
+    height: auto;
+}
+
+.editor-styles-wrapper .wp-block-image figcaption {
+    font-size: var(--font-size-sm);
+    color: var(--muted-foreground);
+    text-align: center;
+    margin-top: var(--space-xs);
+    font-style: italic;
+}
+
+/* ===================================
+   QUOTE BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-quote {
+    border-left: 4px solid var(--primary);
+    padding-left: var(--space-lg);
+    margin: var(--space-lg) 0;
+    font-style: italic;
+}
+
+.editor-styles-wrapper .wp-block-quote p {
+    font-size: var(--font-size-lg);
+    line-height: 1.5;
+    color: var(--foreground);
+}
+
+.editor-styles-wrapper .wp-block-quote cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--muted-foreground);
+    font-size: var(--font-size-sm);
+}
+
+/* ===================================
+   LIST BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.editor-styles-wrapper li {
+    margin-bottom: var(--space-xs);
+    line-height: 1.6;
+}
+
+.editor-styles-wrapper ul li {
+    list-style-type: disc;
+}
+
+.editor-styles-wrapper ol li {
+    list-style-type: decimal;
+}
+
+/* ===================================
+   CODE BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-code {
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+.editor-styles-wrapper code {
+    background: var(--muted);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875em;
+}
+
+/* ===================================
+   TABLE BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-table {
+    margin: var(--space-lg) 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.editor-styles-wrapper .wp-block-table td,
+.editor-styles-wrapper .wp-block-table th {
+    border: 1px solid var(--border);
+    padding: var(--space-sm);
+    text-align: left;
+}
+
+.editor-styles-wrapper .wp-block-table th {
+    background: var(--muted);
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.editor-styles-wrapper .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    background: var(--muted);
+}
+
+/* ===================================
+   SEPARATOR BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-separator {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: var(--space-xl) auto;
+    max-width: 100px;
+}
+
+.editor-styles-wrapper .wp-block-separator.is-style-wide {
+    max-width: 100%;
+}
+
+.editor-styles-wrapper .wp-block-separator.is-style-dots {
+    border: none;
+    text-align: center;
+}
+
+.editor-styles-wrapper .wp-block-separator.is-style-dots::before {
+    content: "···";
+    color: var(--muted-foreground);
+    font-size: var(--font-size-lg);
+    letter-spacing: var(--space-sm);
+}
+
+/* ===================================
+   SPACER BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-spacer {
+    clear: both;
+}
+
+/* ===================================
+   COVER BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-cover {
+    border-radius: var(--radius);
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.editor-styles-wrapper .wp-block-cover .wp-block-cover__inner-container {
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.editor-styles-wrapper .wp-block-cover h1,
+.editor-styles-wrapper .wp-block-cover h2,
+.editor-styles-wrapper .wp-block-cover h3,
+.editor-styles-wrapper .wp-block-cover h4,
+.editor-styles-wrapper .wp-block-cover h5,
+.editor-styles-wrapper .wp-block-cover h6 {
+    color: white;
+}
+
+.editor-styles-wrapper .wp-block-cover p {
+    color: white;
+}
+
+/* ===================================
+   MEDIA TEXT BLOCKS IN EDITOR
+   =================================== */
+.editor-styles-wrapper .wp-block-media-text {
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+}
+
+.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content {
+    padding: var(--space-lg);
+}
+
+/* ===================================
+   CUSTOM BLOCKS PREVIEW IN EDITOR
+   =================================== */
+.editor-styles-wrapper .sillygoose-card-block,
+.editor-styles-wrapper .sillygoose-hero-block,
+.editor-styles-wrapper .sillygoose-statistics-block {
+    margin: var(--space-lg) 0;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    background: var(--muted);
+    text-align: center;
+    position: relative;
+}
+
+.editor-styles-wrapper .sillygoose-card-block::before,
+.editor-styles-wrapper .sillygoose-hero-block::before,
+.editor-styles-wrapper .sillygoose-statistics-block::before {
+    content: attr(data-block-type);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    border-radius: 0 0 var(--radius) 0;
+}
+
+/* ===================================
+   EDITOR SPECIFIC UTILITIES
+   =================================== */
+.editor-styles-wrapper .alignleft {
+    float: left;
+    margin-right: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.editor-styles-wrapper .alignright {
+    float: right;
+    margin-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.editor-styles-wrapper .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-lg);
+}
+
+.editor-styles-wrapper .alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editor-styles-wrapper .alignfull {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* ===================================
+   GRADIENT BACKGROUNDS
+   =================================== */
+.editor-styles-wrapper .has-primary-gradient-background {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.editor-styles-wrapper .has-secondary-gradient-background {
+    background: linear-gradient(135deg, var(--secondary), var(--accent)) !important;
+}
+
+.editor-styles-wrapper .has-accent-gradient-background {
+    background: linear-gradient(135deg, var(--accent), var(--primary)) !important;
+}
+
+/* ===================================
+   RESPONSIVE EDITOR STYLES
+   =================================== */
+@media (max-width: 768px) {
+    .editor-styles-wrapper .wp-block-columns {
+        flex-direction: column;
+    }
+    
+    .editor-styles-wrapper .wp-block-column {
+        flex-basis: 100% !important;
+    }
+    
+    .editor-styles-wrapper .alignleft,
+    .editor-styles-wrapper .alignright {
+        float: none;
+        margin: 0 auto var(--space-lg) auto;
+        display: block;
+    }
+    
+    .editor-styles-wrapper .wp-block-cover {
+        min-height: 300px;
+    }
+    
+    .editor-styles-wrapper .wp-block-cover .wp-block-cover__inner-container {
+        padding: var(--space-lg);
+    }
+}
+
+/* ===================================
+   EDITOR FOCUS STYLES
+   =================================== */
+.editor-styles-wrapper *:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   EDITOR PLACEHOLDER STYLES
+   =================================== */
+.editor-styles-wrapper .wp-block::before {
+    content: "";
+    display: none;
+}
+
+.editor-styles-wrapper .is-selected::before,
+.editor-styles-wrapper .has-child-selected::before {
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+}
+
+/* ===================================
+   BLOCK TOOLBAR ADJUSTMENTS
+   =================================== */
+.block-editor-block-toolbar {
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.block-editor-block-toolbar .components-toolbar-group {
+    border-radius: var(--radius);
+}
+
+/* ===================================
+   CUSTOM EDITOR ENHANCEMENTS
+   =================================== */
+.editor-styles-wrapper .wp-block[data-type="sillygoose/hero-block"] {
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(78, 205, 196, 0.05));
+}
+
+.editor-styles-wrapper .wp-block[data-type="sillygoose/card-block"] {
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    background: rgba(78, 205, 196, 0.05);
+}
+
+.editor-styles-wrapper .wp-block[data-type="sillygoose/statistics-block"] {
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    background: rgba(255, 210, 63, 0.05);
+}
